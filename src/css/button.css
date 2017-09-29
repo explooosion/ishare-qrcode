@@ -1,0 +1,17 @@
+/* 手機模式 - 100% 寬度 */
+
+@media screen and (max-width: 48em) {
+  .btn.btn-maxw {
+    width: 100%;
+  }
+}
+
+button,
+input {
+  height: 4rem;
+  font-size: 2rem !important;
+}
+
+.form-control {
+  font-size: 2rem !important;
+}

@@ -1,0 +1,25 @@
+.header {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+  padding: 2px 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (min-width: 48em) {
+  .header {
+    padding: 0.5rem 2rem;
+  }
+  .header {
+    margin-bottom: 1rem;
+  }
+}

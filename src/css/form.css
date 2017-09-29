@@ -1,0 +1,9 @@
+.col-label {
+  font-size: 1.7rem;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.content .form-group {
+  height: 5rem;
+}

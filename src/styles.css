@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+/* @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); */
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansscsliced.css);
+@import './css/content.css';
+@import './css/button.css';
+@import './css/form.css';
+@import './css/sweet-alert.css';
+
+/* end of import */
+
+* {
+    /* font-family: 'Noto Sans SC Sliced', sans-serif; */
+    font-family: 'Microsoft JhengHei',  sans-serif;
+    font-size: 1.5rem;
+}
+
+body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* overflow-x: hidden; */
+}
+
+@media (min-width: 48em) {
+    .container {
+        max-width: 46rem;
+    }
+}
+
+.container-narrow>hr {
+    margin: 1.5rem 0;
+}

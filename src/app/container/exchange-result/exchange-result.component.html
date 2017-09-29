@@ -1,0 +1,25 @@
+<div id="exchange-result" class="row content">
+  <div class="col-12">
+    <form>
+      <div class="form-group row">
+        <label class="col-sm-5 col-form-label col-label text-right">使用點數：</label>
+        <label class="col-sm-7 col-form-label col-label text-left">{{ pointCost }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-5 col-form-label col-label text-right">剩餘點數：</label>
+        <label class="col-sm-7 col-form-label col-label text-left">{{ point - pointCost }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-5 col-form-label col-label text-right">店家編號：</label>
+        <label class="col-sm-7 col-form-label col-label text-left">{{ storeId }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-5 col-form-label col-label text-right">兌換日期：</label>
+        <label id="exchangeTime" class="col-sm-7 col-form-label col-label text-left">{{ time }}</label>
+      </div>
+      <div class="form-group text-center">
+        <img src="/assets/smile.png" alt="" height="200px">
+      </div>
+    </form>
+  </div>
+</div>

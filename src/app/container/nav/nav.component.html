@@ -1,0 +1,16 @@
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills float-right">
+      <li class="nav-item">
+        <a class="nav-link text-danger" [routerLink]="['/qrcode']" [queryParams]="{childid:'jason123'}" (click)="clearAll()">DEBUG</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <!-- <a class="nav-link text-primary">{{ welcomeMSG }}</a> -->
+      </li>
+      <li *ngIf="false" class="nav-item">
+        <a class="nav-link text-primary" routerLink="/storelogin" (click)="loginOut()">登出</a>
+      </li>
+    </ul>
+  </nav>
+  <h3 class="text-muted">iShare</h3>
+</div>

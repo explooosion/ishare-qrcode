@@ -1,0 +1,7 @@
+#child-login button {
+  height: 6rem;
+}
+
+#child-login input[type='text'] {
+  text-align: center;
+}
