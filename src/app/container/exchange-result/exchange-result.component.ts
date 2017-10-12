@@ -32,11 +32,11 @@ export class ExchangeResultComponent implements OnInit {
     let exchangeCookie = JSON.parse(Cookie.get('exchange'));
     console.log('exchangeCookie', exchangeCookie);
     if (exchangeCookie) {
-      this.childId = exchangeCookie.childId;
-      this.point = exchangeCookie.point;
-      this.pointCost = exchangeCookie.pointCost;
-      this.storeId = exchangeCookie.storeId;
-      this.time = exchangeCookie.time;
+      this.childId = exchangeCookie.recordchild;
+      this.point = exchangeCookie.recordpoint;
+      this.pointCost = exchangeCookie.recordcost;
+      this.storeId = exchangeCookie.recordstore;
+      this.time = exchangeCookie.recordtime;
 
       this.removeAllCookie();
 

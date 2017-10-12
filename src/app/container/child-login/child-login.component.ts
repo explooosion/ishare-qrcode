@@ -39,7 +39,7 @@ export class ChildLoginComponent implements OnInit {
     let storeCookie = JSON.parse(Cookie.get('storeCookie'));
     console.log('storeCookie', storeCookie);
     if (storeCookie) {
-      this.storeName = storeCookie.name;
+      this.storeName = storeCookie.storename;
     } else {
       this.router.navigate(["/error"]);
     }
@@ -50,8 +50,9 @@ export class ChildLoginComponent implements OnInit {
    */
   public async childCheck() {
     let body = {
-      childId: this.childId,
-      childPwd: this.childPwd
+      userId: this.childId,
+      userPwd: this.childPwd,
+      loginbar: 4
     };
     await this.childLogin(body);
   }
@@ -64,7 +65,7 @@ export class ChildLoginComponent implements OnInit {
     return await this.childService.childLogin(body)
       .subscribe(
       result => {
-        this.reslut = result[0][0];
+        this.reslut = result[0];
         if (this.reslut) {
           Cookie.set('childCookie', JSON.stringify(this.reslut));
           this.router.navigate(["/childcheck"]);

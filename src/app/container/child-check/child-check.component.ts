@@ -39,9 +39,9 @@ export class ChildCheckComponent implements OnInit {
     let childCookie = JSON.parse(Cookie.get('childCookie'));
     console.log('childCookie', childCookie);
     if (childCookie) {
-      this.childId = childCookie.account;
-      this.childName = childCookie.name;
-      this.point = childCookie.point;
+      this.childId = childCookie.childusername;
+      this.childName = childCookie.childname;
+      this.point = childCookie.childpoint;
     } else {
       this.router.navigate(["/error"]);
     }
@@ -49,8 +49,8 @@ export class ChildCheckComponent implements OnInit {
     let storeCookie = JSON.parse(Cookie.get('storeCookie'));
     console.log('storeCookie', storeCookie);
     if (storeCookie) {
-      this.storeId = storeCookie.account;
-      this.storeName = storeCookie.name;
+      this.storeId = storeCookie.storeusername;
+      this.storeName = storeCookie.storename;
     } else {
       this.router.navigate(["/error"]);
     }
@@ -62,11 +62,11 @@ export class ChildCheckComponent implements OnInit {
    */
   public async chkCheck() {
     let body = {
-      childId: this.childId,
-      storeId: this.storeId,
-      point: this.point,
-      time: moment().format('YYYY-MM-DD HH:mm:ss'),
-      pointCost: 10 // 扣除點數要討論
+      recordchild: this.childId,
+      recordstore: this.storeId,
+      recordpoint: this.point,
+      recordtime: moment().format('YYYY-MM-DD HH:mm:ss'),
+      recordcost: 10 // 扣除點數要討論
     };
     await this.exchangeAdd(body);
   }

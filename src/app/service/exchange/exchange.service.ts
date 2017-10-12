@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ExchangeService {
 
-  private api: string = '/api/exchange/';
+  private api: string = '/api/record/add';
 
   constructor(private http: Http) { }
 
@@ -16,7 +16,7 @@ export class ExchangeService {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.api + 'add', body)
+    return this.http.post(this.api, body)
       .map((res) => {
         return res.json() || {}
       });

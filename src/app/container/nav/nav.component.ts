@@ -39,6 +39,7 @@ export class NavComponent implements OnInit {
   public loginOut() {
     alert('注意！本系統上線後不再提供登出功能！');
     Cookie.delete('storeCookie');
+    this.router.navigate(["/storelogin"]);
   }
 
   /**

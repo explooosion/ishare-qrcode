@@ -11,8 +11,8 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 })
 export class StoreLoginComponent implements OnInit {
 
-  public storeId: String = 'a01';
-  public storePwd: String = '123456';
+  public storeId: String = 'carie8655';
+  public storePwd: String = 'popo1001';
 
   public reslut: any = null;
 
@@ -42,8 +42,9 @@ export class StoreLoginComponent implements OnInit {
    */
   public async storeSubmit() {
     let body = {
-      storeId: this.storeId,
-      storePwd: this.storePwd
+      userId: this.storeId,
+      userPwd: this.storePwd,
+      loginbar: 2
     };
     await this.storeLogin(body);
   }
@@ -57,7 +58,8 @@ export class StoreLoginComponent implements OnInit {
     await this.storeService.storeLogin(body)
       .subscribe(
       result => {
-        this.reslut = result[0][0];
+        this.reslut = result[0];
+        console.log(this.reslut);
         if (this.reslut) {
 
           Cookie.set('storeCookie', JSON.stringify(this.reslut));

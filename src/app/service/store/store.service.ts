@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class StoreService {
 
-  private api: string = '/api/store/login';
+  private api: string = '/api/user/login';
 
   constructor(private http: Http) { }
 

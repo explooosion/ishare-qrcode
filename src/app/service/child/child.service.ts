@@ -7,10 +7,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ChildService {
 
-  private api: string = '/api/child/login/';
+  private api: string = '/api/user/login';
 
   constructor(private http: Http) { }
- 
+
   public childLogin(body: Object) {
 
     let headers = new Headers({ 'Content-Type': 'application/json' });
