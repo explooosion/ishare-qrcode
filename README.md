@@ -11,7 +11,7 @@ git clone https://gitlab.com/angel-plan/exchange.git
 ```
 
 ```bash
-cd exchange
+cd qrcode
 ```
 
 ```bash

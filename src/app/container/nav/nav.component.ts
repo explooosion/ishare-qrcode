@@ -29,7 +29,7 @@ export class NavComponent implements OnInit {
     console.log(cookie);
     if (cookie) {
       this.isLogin = true;
-      this.welcomeMSG = `Hi, ${cookie.name}!`;
+      this.welcomeMSG = `Hi, ${cookie.storename}!`;
     }
   }
 
@@ -40,15 +40,6 @@ export class NavComponent implements OnInit {
     alert('注意！本系統上線後不再提供登出功能！');
     Cookie.delete('storeCookie');
     this.router.navigate(["/storelogin"]);
-  }
-
-  /**
-   * 清除店家紀錄
-   *
-   * @memberof NavComponent
-   */
-  public clearAll() {
-    Cookie.delete('storeCookie');
   }
 
 }

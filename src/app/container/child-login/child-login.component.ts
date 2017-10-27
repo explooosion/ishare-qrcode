@@ -52,7 +52,7 @@ export class ChildLoginComponent implements OnInit {
     let body = {
       userId: this.childId,
       userPwd: this.childPwd,
-      loginbar: 4
+      logingroup: 4
     };
     await this.childLogin(body);
   }

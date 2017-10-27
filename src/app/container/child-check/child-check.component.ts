@@ -68,6 +68,7 @@ export class ChildCheckComponent implements OnInit {
       recordtime: moment().format('YYYY-MM-DD HH:mm:ss'),
       recordcost: 10 // 扣除點數要討論
     };
+
     await this.exchangeAdd(body);
   }
 

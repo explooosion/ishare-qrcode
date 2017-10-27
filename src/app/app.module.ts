@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { enableProdMode } from '@angular/core';
+
 /* component */
 import { AppComponent } from './app.component';
 import { FooterComponent } from './container/footer/footer.component';
@@ -16,6 +18,8 @@ import { ExchangeResultComponent } from './container/exchange-result/exchange-re
 import { ErrorComponent } from './container/error/error.component';
 
 /* plugin */
+
+enableProdMode();
 
 @NgModule({
   declarations: [
